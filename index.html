@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Counter</title>
+
+    <!-- LINK TO STYLES -->
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- LINK FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- TOP NAV -->
+    <header>
+        <h1>Simple Counter</h1>
+        <div id="portfolio-link">
+            <picture>
+                <source type="image/jpg" srcset="./assets/images/kuba_avatar.jpg">
+                <img src="./assets/images/kuba_avatar.jpg" alt="Kuba Mikołajczyk is looking at the camera and smiling. Behind him there is a dark blue gradient background.">
+            </picture>
+            <p>kubamikolajczyk.pl</p>
+            <a href="https://www.kubamikolajczyk.pl/" target="_blank"></a>
+        </div>
+    </header>
+
+    <!-- COUNTER & SAVED -->
+    <main>
+        <div id="counter">
+            <div id="counter-track">
+                <h2 id="count-el">0</h2>
+            </div>
+            <div id="counter-btn-row">
+                <button id="subtract-btn" onclick="subtract()">-</button>
+                <button id="increment-btn" onclick="increment()">+</button>
+            </div>
+            <button id="save-btn" onclick="save()">Save</button>
+        </div>
+        <!-- Can I add new divs here? -->
+        <div id="saves-container">
+
+        </div>
+    </main>
+
+    <!-- LINK SCRIPTS -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
