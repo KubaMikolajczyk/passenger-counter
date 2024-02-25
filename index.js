@@ -40,6 +40,7 @@ function addElement(fullDate, fullTime){
     // Create count label
     const countLabel = document.createElement("p");
     const countLabelText = document.createTextNode("Counted");
+    countLabel.classList.add("saved-label");
     countLabel.appendChild(countLabelText);
 
     // Create a <p> element and add count to it
@@ -60,6 +61,7 @@ function addElement(fullDate, fullTime){
     // Create date label
     const dateLabel = document.createElement("p");
     const dateLabelText = document.createTextNode("Date");
+    dateLabel.classList.add("saved-label");
     dateLabel.appendChild(dateLabelText);
 
     // Create a <p> element and add date to it
@@ -80,6 +82,7 @@ function addElement(fullDate, fullTime){
     // Create time label
     const timeLabel = document.createElement("p");
     const timeLabelText = document.createTextNode("Time");
+    timeLabel.classList.add("saved-label");
     timeLabel.appendChild(timeLabelText);
 
     // Create a <p> element and add time to it
@@ -91,13 +94,27 @@ function addElement(fullDate, fullTime){
     timeDiv.appendChild(timeLabel);
     timeDiv.appendChild(paraTime);
 
+    //----------------------------------------------------------------
+    // REMOVE BUTTON
+    // Create button
+    const removeBtn = document.createElement("button");
+    removeBtn.setAttribute("id", "remove-btn")
     
+    // Create button label
+    const removeIcon = document.createElement("i");
+    removeIcon.classList.add("ri-close-fill")
+    removeBtn.appendChild(removeIcon);
+
+    // Add remove onclick function to btn
+    removeBtn.setAttribute("onclick","removeItem('" + "saved-count-" + savedIdNum + "')");
+
     // ----------------------------------------------------------------
     // ADD ALL DIVS TO MAIN DIV
     // Add <p> with time to main div
     mainDiv.appendChild(countDiv);
     mainDiv.appendChild(dateDiv);
     mainDiv.appendChild(timeDiv);
+    mainDiv.appendChild(removeBtn);
 
     // ADD ID TO MAIN DIV
     mainDiv.setAttribute("id","saved-count-"+savedIdNum);
@@ -125,5 +142,9 @@ function save(){
 
     // Reset the counter
     resetCount();
+}
 
+function removeItem(objectID){
+    objectToRemove = document.getElementById(objectID);
+    objectToRemove.remove();
 }

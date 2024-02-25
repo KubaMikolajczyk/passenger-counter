@@ -14,12 +14,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- LINK ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 
 <body>
     <!-- TOP NAV -->
     <header>
-        <h1>Simple Counter</h1>
+        <div id="logo">
+            <picture>
+                <source srcset="./assets/images/Logo.svg" type="image/svg">
+                <img src="./assets/images/Logo.svg" alt="Small logo rectangle with dark numbers from 0 to 3 in a grid pattern">
+            </picture>
+            <h1>Just Counter</h1>
+        </div>
         <div id="portfolio-link">
             <picture>
                 <source type="image/jpg" srcset="./assets/images/kuba_avatar.jpg">
@@ -32,20 +41,30 @@
 
     <!-- COUNTER & SAVED -->
     <main>
-        <div id="counter">
-            <div id="counter-track">
-                <h2 id="count-el">0</h2>
+        <!-- <div id="responsive-wrapper"> -->
+            <div id="counter">
+                <div id="counter-track">
+                    <h2 id="count-el">0</h2>
+                </div>
+                <div id="counter-btn-row">
+                    <button id="subtract-btn" onclick="subtract()">
+                        <i class="ri-subtract-line"></i>
+                    </button>
+                    <button id="increment-btn" onclick="increment()">
+                        <i class="ri-add-line"></i>
+                    </button>
+                </div>
+                <button id="save-btn" onclick="save()">
+                    <i class="ri-save-3-fill"></i>
+                    Save
+                </button>
             </div>
-            <div id="counter-btn-row">
-                <button id="subtract-btn" onclick="subtract()">-</button>
-                <button id="increment-btn" onclick="increment()">+</button>
+    
+            <!-- Can I add new divs here? -->
+            <div id="saves-container">
+    
             </div>
-            <button id="save-btn" onclick="save()">Save</button>
-        </div>
-        <!-- Can I add new divs here? -->
-        <div id="saves-container">
-
-        </div>
+        <!-- </div> -->
     </main>
 
     <!-- LINK SCRIPTS -->
